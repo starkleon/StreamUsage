@@ -144,27 +144,6 @@ public class Standards {
 
 
 
-    public static void main(String[] args){
-        Standards sd = new Standards();
-        TestObject[] objects1 = new TestObject[]{
-                new TestObject(1,2,1.2),
-                new TestObject(2,3,2.2),
-                new TestObject(3,4,3.2)
-
-        };
-        TestObject[] objects2 = new TestObject[]{
-                new TestObject(3,3,3.3),
-                new TestObject(4,3,4.3),
-                new TestObject(5,3,5.3)
-
-        };
-        Stream<TestObject> s1 = Arrays.stream(objects1);
-        s1.flatMap(s -> Arrays.stream(objects2)).forEach(System.out::println);
-
-    }
-
-
-
 
 
 
