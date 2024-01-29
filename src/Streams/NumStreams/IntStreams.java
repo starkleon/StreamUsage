@@ -1,4 +1,4 @@
-package NumStreams;
+package Streams.NumStreams;
 
 import ObjStreams.TestObject;
 

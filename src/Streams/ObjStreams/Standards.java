@@ -1,8 +1,9 @@
-package ObjStreams;
+package Streams.ObjStreams;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.*;
 
@@ -78,6 +79,13 @@ public class Standards {
         return stream.map(TestObject::toString).collect(Collectors.joining(delimeter));
     }
 
+    /**
+     *Returns a map mapping the y member of the objects to the number of objects with this y value in the stream.
+     * Collectors.groupingBy(Function, collector)
+     */
+    public Map<Double, Long> collectToMap(Stream<TestObject> stream){
+        return stream.collect(Collectors.groupingBy(TestObject::getY1, Collectors.counting()));
+    }
 
     /**
      * returning booleans from streams with anyMatch(Predicate) or noneMatch()
