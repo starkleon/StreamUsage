@@ -1,6 +1,6 @@
 package Streams.NumStreams;
 
-import ObjStreams.TestObject;
+import Streams.ObjStreams.TestObject;
 
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
